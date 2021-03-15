@@ -15,6 +15,18 @@ class Student:
     def say_hi(self):
         print("Hi, my name is " + self.name)
 
+    # representation of object for debug
+    def __repr__(self):
+        return "Employee('{}', '{}', '{}')".format(self.name, self.gpa, self.is_on_probation)
+
+    # string representation of object, same as toString in java
+    def __str__(self):
+        return "str of Student: " + self.name + " " + str(self.gpa) + " " + str(self.is_on_probation)
+
+    # overridden method for "+"
+    def __add__(self, other):
+        return Student(self.name + " " + other.name, self.gpa + other.gpa)
+
     # class methods - we can access only class methods/attributes
     @classmethod
     def class_method_set_global_probation(cls, is_on_probation):
@@ -32,7 +44,8 @@ class Student:
 
 
 class GraduateStudent(Student):
-    def __init__(self, first, gpa, lang):
+    # Default value
+    def __init__(self, first, gpa, lang="En"):
         # refer to super constructor
         super().__init__(first, gpa)
         self.lang = lang

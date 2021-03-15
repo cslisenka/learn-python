@@ -3,7 +3,7 @@ from Student import Student
 from Student import GraduateStudent
 
 student1 = Student("Anna", 5.5)
-print(student1) # print whole object
+print(student1) # print whole object (using __str__ method)
 print(student1.name) # print attribute
 print(student1.gpa) # print attribute
 print(student1.is_on_probation) # print attribute
@@ -47,3 +47,19 @@ Student.static_say_hi("Aaaaa")
 
 # view information on attributes and methods
 help(Student)
+
+# check instance of
+print(isinstance(student1, Student))
+print(issubclass(GraduateStudent, Student))
+
+print(repr(student1)) # using debugging logging function
+print(str(student1)) # using toString function
+
+# operators to override
+print(1 + 2)
+print(int.__add__(1, 2)) # we may implement same method in the class
+
+# testing operation "+" that we override
+stu1 = Student("aaa", 5)
+stu2 = Student("bbb", 6.5)
+print(stu1 + stu2)
