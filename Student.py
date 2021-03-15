@@ -7,3 +7,9 @@ class Student:
 
     def say_hi(self):
         print("Hi, my name is " + self.name)
+
+
+class GraduateStudent(Student):
+    def say_hi(self):
+        # how do we call super method?
+        print("Hi, my name is " + self.name + " I'm a graduate student")
