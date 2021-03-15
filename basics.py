@@ -26,3 +26,6 @@ print((-2.087 + 4) * 2)
 print(str(5) + " string") # Converting number to string, otherwise we may not add number and string
 print(pow(2, 2)) # Power
 print(round(3.7)) # This works anyway even if we do not import "math" module
+
+# put into power
+print(2**3) # 2 ^ 3
