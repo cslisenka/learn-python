@@ -19,7 +19,7 @@ student1.surname = "Surname"
 print(student1.surname)
 
 # inheritance
-gradStud1 = GraduateStudent("Alice", 5.5)
+gradStud1 = GraduateStudent("Alice", 5.5, "English")
 gradStud1.say_hi()
 
 # Calling method as static passing instance object
@@ -44,3 +44,6 @@ print(st2.gpa)
 
 # calling static method
 Student.static_say_hi("Aaaaa")
+
+# view information on attributes and methods
+help(Student)

@@ -30,7 +30,15 @@ class Student:
     def static_say_hi(name):
         print("Hi, " + name)
 
+
 class GraduateStudent(Student):
+    def __init__(self, first, gpa, lang):
+        # refer to super constructor
+        super().__init__(first, gpa)
+        self.lang = lang
+
     def say_hi(self):
+        # reference to super method
+        super().say_hi()
         # how do we call super method?
         print("Hi, my name is " + self.name + " I'm a graduate student")
