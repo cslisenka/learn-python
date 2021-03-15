@@ -29,3 +29,9 @@ print(round(3.7)) # This works anyway even if we do not import "math" module
 
 # put into power
 print(2**3) # 2 ^ 3
+
+# using multiple variables as result
+year, month, day = "2021-Mar-15".split("-")
+print(year)
+print(month)
+print(day)
