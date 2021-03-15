@@ -27,6 +27,20 @@ class Student:
     def __add__(self, other):
         return Student(self.name + " " + other.name, self.gpa + other.gpa)
 
+    # property decorators (similar as getters and setters)
+    @property
+    def email(self):
+        return "{}@gmail.com".format(self.name)
+
+    @email.setter
+    def email(self, value):
+        self.name = value.replace("@gmail.com", "")
+
+    @email.deleter
+    def email(self):
+        print("delete email")
+        self.name = None
+
     # class methods - we can access only class methods/attributes
     @classmethod
     def class_method_set_global_probation(cls, is_on_probation):
