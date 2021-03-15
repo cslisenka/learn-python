@@ -7,13 +7,15 @@ class Student:
 
     # define constructor with class attributes
     def __init__(self, name, gpa):
+        # instance attributes
         self.name = name
         self.gpa = gpa
 
+    # instance method has reference to instance object
     def say_hi(self):
         print("Hi, my name is " + self.name)
 
-    # static (or class) methods
+    # class methods - we can access only class methods/attributes
     @classmethod
     def class_method_set_global_probation(cls, is_on_probation):
         cls.is_on_probation = is_on_probation
@@ -23,6 +25,10 @@ class Student:
         first, gpa = stu_str.split("-")
         return Student(first, float(gpa))
 
+    # no access to the instance or class inside method, just park it here
+    @staticmethod
+    def static_say_hi(name):
+        print("Hi, " + name)
 
 class GraduateStudent(Student):
     def say_hi(self):

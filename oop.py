@@ -41,3 +41,6 @@ print(student1.is_on_probation)
 st2 = Student.from_string("Alice-5.6")
 print(st2.name)
 print(st2.gpa)
+
+# calling static method
+Student.static_say_hi("Aaaaa")
