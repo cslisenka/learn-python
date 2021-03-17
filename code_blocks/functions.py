@@ -35,7 +35,32 @@ print(str(sum_result))
 def greeting(name: str) -> str:
     return "name " + name
 
+
 print(greeting("greet"))
+
+
+# var args
+def var_args_fun(*args):
+    # args become a tuple
+    print(type(args))
+    print(args)
+
+
+def var_kargs_fun(**kargs):
+    # kargs become a dictionary
+    print(type(kargs))
+    print(kargs)
+
+
+# we can combine
+def var_args_kargs_fun(*args, **kargs):
+    print(args)
+    print(kargs)
+
+
+var_args_fun("aaa", "bbb", "ccc")
+var_kargs_fun(aaa="aaa", bbb="bbb")
+var_args_kargs_fun("aaa", "vvv", aaa="aaa", bbb="bbb")
 
 # there could be aliases for existing types and we may pass function as method parameter as a callback
 # https://docs.python.org/3/library/typing.html

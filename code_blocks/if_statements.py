@@ -31,3 +31,19 @@ elif not(is_male) and is_tall:
     print("male and not tall")
 else:
     print("else")
+
+# when we work with objects
+str1 = [1, 2, 3]
+str2 = [1, 2, 3]
+str3 = str2
+print(str1 == str2) # compares values
+print(str1 is str2) # compares references
+print(str3 is str2) # compares references
+print(str(id(str1)) + " " + str(id(str2)) + " " + str(id(str3)))
+
+# when we work with strings, same strings have same reference, strings are immutable!
+str1 = "aaa"
+str2 = "aaa"
+print(str1 == str2) # compares values
+print(str1 is str2) # compares references
+print(str(id(str1)) + " " + str(id(str2)))
