@@ -26,3 +26,7 @@ cities = ["Minsk", "Moscow", "Chicago"]
 cities.sort() # sort list (works only if all elements are the same type)
 cities.reverse()
 print(cities)
+
+# get values as well as indices
+for i, val in enumerate(cities):
+    print(str(i) + " " + str(val))
