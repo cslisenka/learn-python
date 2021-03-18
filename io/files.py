@@ -22,3 +22,9 @@ try:
 finally:
     my_file.close()
     output.close()
+
+
+# another option, using with (try with resources in java)
+# this block automatically closes file
+with open("files/output.txt", "a") as f:
+    f.write("aaa!")
