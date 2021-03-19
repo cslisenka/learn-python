@@ -1,7 +1,7 @@
 # Function example
 # first parameter is string, second is integer
 def say_hi(name, age):
-    # All code of the function happens inside space
+    # All core of the function happens inside space
     print("Say hi " + name + " age " + str(age))
 
     # This statement is also inside function
